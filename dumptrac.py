@@ -1,16 +1,12 @@
 from xmlrpc.client import ServerProxy as TracAPI
 from getpass import getpass
-from urllib.parse import quote
 import yaml
 
 HOST = 'www.studentrobotics.org'
 
-username = input('SR Username: ')
-password = getpass('SR Password: ')
-
-URL = 'https://{un}:{pw}@{host}/trac/login/xmlrpc'.format(un=quote(username),
-                                                          pw=quote(password),
-                                                          host=HOST)
+URL = 'https://{host}/trac/xmlrpc'.format(un=quote(username),
+                                          pw=quote(password),
+                                          host=HOST)
 
 TRAC = TracAPI(URL)
 
