@@ -81,11 +81,6 @@ def dump_tickets():
     with open('tickets.yaml', 'w') as f:
         yaml.dump(data, f, default_flow_style=False)
 
-#dump_wiki()
+dump_wiki()
 dump_tickets()
-
-# TODO: dump tickets
-# ticket.query(max=0) gives all ticket IDs
-# ticket.listAttachments(ticket) gives (filename, desc, size, time, author) for ticket attachments
-# ticket.get(ticket) gives main ticket information
 
