@@ -4,9 +4,7 @@ import yaml
 
 HOST = 'www.studentrobotics.org'
 
-URL = 'https://{host}/trac/xmlrpc'.format(un=quote(username),
-                                          pw=quote(password),
-                                          host=HOST)
+URL = 'https://{host}/trac/xmlrpc'.format(host=HOST)
 
 TRAC = TracAPI(URL)
 
